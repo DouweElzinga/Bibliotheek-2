@@ -35,9 +35,9 @@ $routes->setAutoRoute(true);
 //$routes->get('/', 'Home::index');
 
 $routes->add('product/(:any)/(:any)', 'Shop::product/$1/$2');
-$routes->add('blog', function (){
+/*$routes->add('blog', function (){
 	echo 'this is a blog';
-});
+});*/
 
 $routes->group('admin', function ($routes){
 	$routes->add('user', 'Admin\Users::index');
