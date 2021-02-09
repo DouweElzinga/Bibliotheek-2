@@ -2,7 +2,7 @@
 <html>
 
 <head>
-    <title>CodeIgniter4 Blog</title>
+    <title><?= $meta_title ?></title>
 </head>
 
 <body>
