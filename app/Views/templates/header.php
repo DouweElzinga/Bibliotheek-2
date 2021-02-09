@@ -2,7 +2,7 @@
 <html>
 
 <head>
-    <title><?= $meta_title ?></title>
+    <title><?= (isset($meta_title) ? $meta_title : 'Default Title') ?></title>
 </head>
 
 <body>
