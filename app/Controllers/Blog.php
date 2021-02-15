@@ -48,10 +48,12 @@ class Blog extends BaseController
 		if($this->request->getMethod() == 'post'){
 			$model = new BlogModel();
 			$model->save($_POST);
+			return redirect()->to('/blog');
 		}
-		//return view('new_post', $data);
 
-		return redirect()->to('/blog');
+		return view('new_post', $data);
+
+		
 	}
 
 	public function delete($id){
