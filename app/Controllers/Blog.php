@@ -3,23 +3,18 @@
 namespace App\Controllers;
 
 use App\Models\BlogModel;
+use CodeIgniter\Database\Query;
 
 class Blog extends BaseController
 {
 	public function index()
 	{
-		$data = [
-			'meta_title' => 'Home',
-			'title' => 'Our Blog',
-		];
 
-		$posts = ['Title 1', 'Title 2', 'Title 3'];
-		$data['posts'] = $posts;
-
-		
-		return view('blog', $data);
+		return view('blog');
 		
 	}
+
+	
 
 	public function post($id)
 	{
@@ -54,7 +49,7 @@ class Blog extends BaseController
 			$model = new BlogModel();
 			$model->save($_POST);
 		}
-		return view('new_post', $data);
+		return view('blog', $data);
 	}
 
 	public function delete($id){
