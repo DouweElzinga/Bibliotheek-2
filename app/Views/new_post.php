@@ -17,7 +17,7 @@
                 <textarea class="form-control" name="post_content" rows="3"></textarea>
             </div>
             <div class="form-group">
-                <button class="btn btn-succes btn-sm">Create</button>
+                <button href="/blog" class="btn btn-succes btn-sm">Create</button>
             </div>
         </form>
         

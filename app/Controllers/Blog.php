@@ -49,7 +49,9 @@ class Blog extends BaseController
 			$model = new BlogModel();
 			$model->save($_POST);
 		}
-		return view('blog', $data);
+		//return view('new_post', $data);
+
+		return redirect()->to('/blog');
 	}
 
 	public function delete($id){
