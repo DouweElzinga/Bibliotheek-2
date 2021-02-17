@@ -8,7 +8,12 @@ class Users extends BaseController
 {
 	public function index()
 	{
-		echo '<h1>This is a User area</h1>';
+        // zuja: zoals in veel van jouw controllers, alles wat je via een controller wil tonen doe je via een view!!!
+		//echo '<h1>This is a User area</h1>';
+        $db = \Config\Database::connect(); 
+        $query = $db->query('SELECT * FROM posts');
+        $data['results'] = $query->getResult();
+        return view('admin\\users', $data); // gaat even om het idee
 	}
 
     public function getAllUsers()
