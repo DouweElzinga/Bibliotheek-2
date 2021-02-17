@@ -27,12 +27,6 @@ SET time_zone = "+00:00";
 -- Tabelstructuur voor tabel `posts`
 --
 
--- zuja: ik zie allemaal velden met een underscore '_' en daarnaast de tabelnaam ervoor. 
--- Persoonlijk houd ik daar niet zo van, niet alleen omdat dan query's zo lang worden, maar ook omdat het dubbele informatie is.
--- V.b. select posts.post_id, posts.post_title from posts
--- vooral als er sprake is van een JOIN.
--- Daarnaast zou ik nu wat meer tabellen verwachten, iets met categorieën of zo.
-
 CREATE TABLE `posts` (
   `post_id` int(11) NOT NULL,
   `post_title` varchar(255) NOT NULL,
